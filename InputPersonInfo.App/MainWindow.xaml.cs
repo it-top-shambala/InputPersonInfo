@@ -7,7 +7,7 @@ namespace InputPersonInfo.App
 {
     public partial class MainWindow : Window
     {
-        private Person _person;
+        private readonly Person _person;
         
         public MainWindow()
         {
@@ -26,7 +26,7 @@ namespace InputPersonInfo.App
             _person.FirstName = Input_FirstName.Text;
             _person.LastName = Input_LastName.Text;
             
-            int.TryParse(Input_Age.Text, out int age);
+            int.TryParse(Input_Age.Text, out var age);
             _person.Age = age;
             
             ClearAll();
