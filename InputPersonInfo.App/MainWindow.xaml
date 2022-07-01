@@ -8,21 +8,7 @@
         Title="Персональная информация" 
         Height="450" Width="450">
     <Window.Resources>
-        <Style x:Key="Style_Default" TargetType="Control">
-            <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="18"/>
-        </Style>
-        <Style x:Key="Style_Label"
-               TargetType="Label"
-               BasedOn="{StaticResource Style_Default}">
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Foreground" Value="DarkBlue"/>
-        </Style>
-        
-        <Style x:Key="Style_input" TargetType="TextBox" BasedOn="{StaticResource Style_Default}">
-            <Setter Property="Width" Value="300"/>
-            <Setter Property="Padding" Value="3"/>
-        </Style>
+       
     </Window.Resources>
     <StackPanel>
         <!-- Заголовок -->
@@ -32,7 +18,7 @@
                    Margin="5"/>
         
         <!-- Ввод имени -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource Style_StackPanel}">
             <Label Content="Имя" 
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_FirstName" 
@@ -41,7 +27,7 @@
                      />
         </StackPanel>
         <!-- Ввод фамилии -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource Style_StackPanel}">
             <Label Content="Фамилия" 
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_LastName" 
@@ -50,7 +36,7 @@
                      />
         </StackPanel>
         <!-- Ввод возраста -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource Style_StackPanel}">
             <Label Content="Возраст" 
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_Age" 
@@ -59,7 +45,7 @@
                      />
         </StackPanel>
         
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource Style_StackPanel}">
             <Label Content="Отчество" 
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Patronymic_TextBox" 
@@ -69,29 +55,29 @@
                      />
         </StackPanel>
         
-        <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+        <StackPanel Style="{StaticResource Style_StackPanel}" VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <DatePicker x:Name="DatePicker" IsDropDownOpen="True" SelectedDateFormat="Long" VerticalAlignment="Center" Margin="0,10,0,10"/>    
         </StackPanel>
         
             <!-- Кнопки -->
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Style="{StaticResource Style_StackPanel}">
             <Button x:Name="Button_Clear" 
                     Content="Очистить" 
                     Margin="5" Padding="3"
-                    Style="{StaticResource ResourceKey=Style_Default}"
+                    Style="{StaticResource ResourceKey=Style_ButtonClear}"
                     IsEnabled="False"
                     Click="Button_Clear_OnClick"/>
             
             <Button x:Name="Button_Save" 
                     Content="Сохранить" 
                     Margin="5" Padding="3"
-                    Style="{StaticResource ResourceKey=Style_Default}"
+                    Style="{StaticResource ResourceKey=Style_ButtonSave}"
                     Click="Button_Save_OnClick"/>
             
             <Button x:Name="Button_ExportToFile" 
                     Content="Выгрузить в файл" 
                     Margin="5" Padding="3"
-                    Style="{StaticResource ResourceKey=Style_Default}"
+                    Style="{StaticResource ResourceKey=Style_ButtonExportFromFile}"
                     Click="Button_ExportToFile_OnClick"/>
         </StackPanel>
     </StackPanel>
