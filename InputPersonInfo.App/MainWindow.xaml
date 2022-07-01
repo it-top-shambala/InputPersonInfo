@@ -19,7 +19,7 @@
             <Setter Property="Foreground" Value="DarkBlue"/>
         </Style>
         
-        <Style x:Key="Style_input" TargetType="TextBox">
+        <Style x:Key="Style_input" TargetType="TextBox" BasedOn="{StaticResource Style_Default}">
             <Setter Property="Width" Value="300"/>
             <Setter Property="Padding" Value="3"/>
         </Style>
