@@ -12,10 +12,7 @@
     </Window.Resources>
     <StackPanel>
         <!-- Заголовок -->
-        <TextBlock Text="Персональная информация" 
-                   FontSize="25" 
-                   Foreground="Red" 
-                   Margin="5"/>
+        <TextBlock Text="Персональная информация" Style="{StaticResource Style_Title}"/>
         
         <!-- Ввод имени -->
         <StackPanel Style="{StaticResource Style_StackPanel}">
@@ -60,7 +57,7 @@
         </StackPanel>
         
             <!-- Кнопки -->
-        <StackPanel Style="{StaticResource Style_StackPanel}">
+        <StackPanel Style="{StaticResource Style_ButtonPanel}">
             <Button x:Name="Button_Clear" 
                     Content="Очистить" 
                     Margin="5" Padding="3"
@@ -75,7 +72,7 @@
                     Click="Button_Save_OnClick"/>
             
             <Button x:Name="Button_ExportToFile" 
-                    Content="Выгрузить в файл" 
+                    Content="Выгрузить" 
                     Margin="5" Padding="3"
                     Style="{StaticResource ResourceKey=Style_ButtonExportFromFile}"
                     Click="Button_ExportToFile_OnClick"/>

@@ -20,6 +20,7 @@
         <Setter Property="Margin" Value="5"/>
         <Setter Property="Padding" Value="3"/>
         <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Width" Value="125"/>
     </Style>
     <Style x:Key="Style_ButtonClear" TargetType="Button" BasedOn="{StaticResource Style_Button}">
         <Setter Property="Background" Value="Red"/>
@@ -28,10 +29,21 @@
         <Setter Property="Background" Value="Green"/>
     </Style>
     <Style x:Key="Style_ButtonExportFromFile" TargetType="Button" BasedOn="{StaticResource Style_Button}">
-        <Setter Property="Background" Value="Yellow"/>
+        <Setter Property="Background" Value="Blue"/>
     </Style>
     <Style x:Key="Style_StackPanel" TargetType="StackPanel">
         <Setter Property="Orientation" Value="Horizontal"/>
         <Setter Property="Margin" Value="5"/>
+    </Style>
+    <Style x:Key="Style_Title" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="27"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Foreground" Value="DarkRed"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="Style_ButtonPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 </ResourceDictionary>
