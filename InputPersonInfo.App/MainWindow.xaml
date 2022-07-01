@@ -8,7 +8,7 @@
         Title="Персональная информация" 
         Height="450" Width="450">
     <Window.Resources>
-       
+        <ResourceDictionary Source="StyleResource.xaml"/>
     </Window.Resources>
     <StackPanel>
         <!-- Заголовок -->

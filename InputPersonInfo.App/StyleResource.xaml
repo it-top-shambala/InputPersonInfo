@@ -21,20 +21,15 @@
         <Setter Property="Padding" Value="3"/>
         <Setter Property="Foreground" Value="White"/>
     </Style>
-        
     <Style x:Key="Style_ButtonClear" TargetType="Button" BasedOn="{StaticResource Style_Button}">
         <Setter Property="Background" Value="Red"/>
     </Style>
-        
     <Style x:Key="Style_ButtonSave" TargetType="Button" BasedOn="{StaticResource Style_Button}">
         <Setter Property="Background" Value="Green"/>
     </Style>
-
     <Style x:Key="Style_ButtonExportFromFile" TargetType="Button" BasedOn="{StaticResource Style_Button}">
         <Setter Property="Background" Value="Yellow"/>
     </Style>
-
-        
     <Style x:Key="Style_StackPanel" TargetType="StackPanel">
         <Setter Property="Orientation" Value="Horizontal"/>
         <Setter Property="Margin" Value="5"/>
