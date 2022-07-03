@@ -46,7 +46,6 @@
             <Label Content="Отчество" 
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Patronymic_TextBox" 
-                     FontSize="18"
                      Style="{StaticResource ResourceKey=Style_input}"
                      TextChanged="TextChanged"
                      />

@@ -24,7 +24,7 @@ namespace InputPersonInfo.App
 
         private void Button_Save_OnClick(object sender, RoutedEventArgs e)
         {
-            GetAll();
+            FetchInput();
             ClearAll();
         }
 
@@ -82,7 +82,7 @@ namespace InputPersonInfo.App
                 SelectedDate = DatePicker.SelectedDate
             };
         }
-        private void GetAll()
+        private void FetchInput()
         {
             _person.FirstName = Input_FirstName.Text;
             _person.LastName = Input_LastName.Text;
