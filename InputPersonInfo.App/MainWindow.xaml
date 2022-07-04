@@ -22,8 +22,8 @@
             <Label Content="Имя"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_FirstName"
-                     Style="{StaticResource ResourceKey=Style_Input}"
-                     TextChanged="Input_OnTextChanged"/>
+                     Style="{StaticResource ResourceKey=Style_Input}"/>
+                     <!-- TextChanged="Input_OnTextChanged"/> -->
         </StackPanel>
         
         <!-- Ввод фамилии -->
@@ -31,8 +31,8 @@
             <Label Content="Фамилия"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_LastName"
-                     Style="{StaticResource ResourceKey=Style_Input}"
-                     TextChanged="Input_OnTextChanged"/>
+                     Style="{StaticResource ResourceKey=Style_Input}"/>
+                     <!-- TextChanged="Input_OnTextChanged"/> -->
         </StackPanel>
         
         <!-- Ввод возраста -->
@@ -40,17 +40,17 @@
             <Label Content="Возраст"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_Age"
-                     Style="{StaticResource ResourceKey=Style_Input}"
-                     TextChanged="Input_OnTextChanged"/>
+                     Style="{StaticResource ResourceKey=Style_Input}"/>
+                     <!-- TextChanged="Input_OnTextChanged"/> -->
         </StackPanel>
         
         <!-- Кнопки -->
         <StackPanel Style="{StaticResource ResourceKey=Style_ButtonsPanel}">
             <Button x:Name="Button_Clear" 
                     Content="Очистить"
-                    IsEnabled="False"
                     Style="{StaticResource ResourceKey=Style_ButtonClear}"
-                    Click="Button_Clear_OnClick"/>
+                    Click="Button_Clear_OnClick">
+            </Button>
             
             <Button x:Name="Button_Save" 
                     Content="Сохранить"

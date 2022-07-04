@@ -46,7 +46,7 @@ namespace InputPersonInfo.App
             Input_Age.Clear();
         }
 
-        private void Input_OnTextChanged(object sender, TextChangedEventArgs e)
+        /*private void Input_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var flagFirstname = string.IsNullOrWhiteSpace(Input_FirstName.Text);
             var flagLastname = string.IsNullOrWhiteSpace(Input_LastName.Text);
@@ -60,6 +60,6 @@ namespace InputPersonInfo.App
             {
                 Button_Clear.IsEnabled = true;
             }
-        }
+        }*/
     }
 }

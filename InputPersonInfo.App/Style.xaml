@@ -32,7 +32,25 @@
     <!-- Стиль для кнопки Очистить -->
     <Style x:Key="Style_ButtonClear" TargetType="Button"
            BasedOn="{StaticResource ResourceKey=Style_ButtonDefault}">
-        <Setter Property="Background" Value="Red"/>
+        <Style.Setters>
+            <Setter Property="Background" Value="Red"/>
+        </Style.Setters>
+        
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding ElementName=Input_FirstName, Path=Text}" 
+                               Value=""/>
+                    <Condition Binding="{Binding ElementName=Input_LastName, Path=Text}" 
+                               Value=""/>
+                    <Condition Binding="{Binding ElementName=Input_Age, Path=Text}" 
+                               Value=""/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="IsEnabled" Value="False"/>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+        </Style.Triggers>
     </Style>
     <!-- Стиль для кнопки Сохранить -->
     <Style x:Key="Style_ButtonSave" TargetType="Button"
