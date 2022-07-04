@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Text.Json;
 using System.Windows;
+using System.Windows.Controls;
 using InputPersonInfo.Lib;
 
 namespace InputPersonInfo.App
@@ -43,6 +44,22 @@ namespace InputPersonInfo.App
             Input_FirstName.Clear();
             Input_LastName.Clear();
             Input_Age.Clear();
+        }
+
+        private void Input_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var flagFirstname = string.IsNullOrWhiteSpace(Input_FirstName.Text);
+            var flagLastname = string.IsNullOrWhiteSpace(Input_LastName.Text);
+            var flagAge = string.IsNullOrWhiteSpace(Input_Age.Text);
+
+            if (flagFirstname && flagLastname && flagAge)
+            {
+                Button_Clear.IsEnabled = false;
+            }
+            else
+            {
+                Button_Clear.IsEnabled = true;
+            }
         }
     }
 }
