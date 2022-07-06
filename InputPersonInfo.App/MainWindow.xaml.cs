@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using InputPersonInfo.Lib;
+using System;
 
 namespace InputPersonInfo.App
 {
@@ -26,9 +27,13 @@ namespace InputPersonInfo.App
         {
             _person.FirstName = Input_FirstName.Text;
             _person.LastName = Input_LastName.Text;
-            
+            _person.Surname = Input_Surname.Text;
+           
             int.TryParse(Input_Age.Text, out var age);
             _person.Age = age;
+
+            DateTime.TryParse(Input_BurthDay.Text, out var date_time);
+            _person.BurthDay = date_time;
             
             ClearAll();
         }
@@ -44,6 +49,8 @@ namespace InputPersonInfo.App
             Input_FirstName.Clear();
             Input_LastName.Clear();
             Input_Age.Clear();
+            Input_Surname.Clear();
+            Input_BurthDay.Clear();
         }
 
         /*private void Input_OnTextChanged(object sender, TextChangedEventArgs e)

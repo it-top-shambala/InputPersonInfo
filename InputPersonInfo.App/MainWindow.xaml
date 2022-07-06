@@ -34,7 +34,17 @@
                      Style="{StaticResource ResourceKey=Style_Input}"/>
                      <!-- TextChanged="Input_OnTextChanged"/> -->
         </StackPanel>
-        
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Отчество" 
+                   Width="100"
+                   FontSize="18"/>
+            <TextBox x:Name="Input_Surname" 
+                     Width="300" 
+                     Padding="3"
+                     FontSize="18"/>
+        </StackPanel>
+
         <!-- Ввод возраста -->
         <StackPanel Orientation="Horizontal" Margin="5">
             <Label Content="Возраст"
@@ -43,7 +53,17 @@
                      Style="{StaticResource ResourceKey=Style_Input}"/>
                      <!-- TextChanged="Input_OnTextChanged"/> -->
         </StackPanel>
-        
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Дата Рождения" 
+                   Width="100"
+                   FontSize="18"/>
+            <TextBox x:Name="Input_BurthDay" 
+                     Width="300" 
+                     Padding="3"
+                     FontSize="18"/>
+        </StackPanel>
+
         <!-- Кнопки -->
         <StackPanel Style="{StaticResource ResourceKey=Style_ButtonsPanel}">
             <Button x:Name="Button_Clear" 
