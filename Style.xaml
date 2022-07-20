@@ -1,0 +1,99 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Общий стиль -->
+    <Style x:Key="Style_Default" TargetType="Control">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <!-- Стиль для Label -->
+    <Style x:Key="Style_Label" TargetType="Label"
+           BasedOn="{StaticResource ResourceKey=Style_Default}">
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Foreground" Value="DarkBlue"/>
+    </Style>
+
+    <!-- Стиль для Input -->
+    <Style x:Key="Style_Input" TargetType="TextBox"
+           BasedOn="{StaticResource ResourceKey=Style_Default}">
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Padding" Value="3"/>
+    </Style>
+
+    <!-- Стиль для DoB -->
+    <Style x:Key="Style_DoB_Input" TargetType="TextBox"
+           BasedOn="{StaticResource ResourceKey=Style_Default}">
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Margin" Value="14, 0, 0, 0"/>
+    </Style>
+
+    <!-- Стили для кнопок -->
+    <Style x:Key="Style_ButtonDefault" TargetType="Button"
+           BasedOn="{StaticResource ResourceKey=Style_Default}">
+        <Setter Property="Width" Value="125"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+    <!-- Стиль для кнопки Очистить -->
+    <Style x:Key="Style_ButtonClear" TargetType="Button"
+           BasedOn="{StaticResource ResourceKey=Style_ButtonDefault}">
+        <Style.Setters>
+            <Setter Property="Background" Value="Red"/>
+        </Style.Setters>
+
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding ElementName=Input_FirstName, Path=Text}" 
+                               Value=""/>
+                    <Condition Binding="{Binding ElementName=Input_LastName, Path=Text}" 
+                               Value=""/>
+                    <Condition Binding="{Binding ElementName=Input_Age, Path=Text}" 
+                               Value=""/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.Setters>
+                    <Setter Property="IsEnabled" Value="False"/>
+                </MultiDataTrigger.Setters>
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
+    <!-- Стиль для кнопки Сохранить -->
+    <Style x:Key="Style_ButtonSave" TargetType="Button"
+           BasedOn="{StaticResource ResourceKey=Style_ButtonDefault}">
+        <Setter Property="Background" Value="Green"/>
+    </Style>
+    <!-- Стиль для кнопки Выгрузить в файл -->
+    <Style x:Key="Style_ButtonExportToFile" TargetType="Button"
+           BasedOn="{StaticResource ResourceKey=Style_ButtonDefault}">
+        <Setter Property="Background" Value="Blue"/>
+    </Style>
+
+    <!-- Стиль для заголовка -->
+    <Style x:Key="Style_Title" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="27"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Foreground" Value="DarkRed"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- Стиль для даты рождения -->
+    <Style x:Key="Style_DoB" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Foreground" Value="DarkBlue"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- Стиль для панели кнопок -->
+    <Style x:Key="Style_ButtonsPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+</ResourceDictionary>
