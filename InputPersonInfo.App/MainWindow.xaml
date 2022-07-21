@@ -17,7 +17,7 @@
                    Style="{StaticResource ResourceKey=Style_Title}"/>
 
         <!-- Ввод имени -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource ResourceKey=StackPanel_Default}">
             <Label Content="Имя"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_FirstName"
@@ -26,7 +26,7 @@
         </StackPanel>
 
         <!-- Ввод фамилии -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource ResourceKey=StackPanel_Default}">
             <Label Content="Фамилия"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_LastName"
@@ -35,7 +35,7 @@
         </StackPanel>
 
         <!-- Ввод отчества -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource ResourceKey=StackPanel_Default}">
             <Label Content="Отчество"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_Patronymic"
@@ -44,7 +44,7 @@
         </StackPanel>
 
         <!-- Ввод возраста -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource ResourceKey=StackPanel_Default}">
             <Label Content="Возраст"
                    Style="{StaticResource ResourceKey=Style_Label}"/>
             <TextBox x:Name="Input_Age"
@@ -53,7 +53,7 @@
         </StackPanel>
         
         <!-- Ввод возраста -->
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Style="{StaticResource ResourceKey=StackPanel_Default}">
             <TextBlock Text="Дата рождения" 
                    Style="{StaticResource ResourceKey=Style_DoB}"
                    Margin="0, 0,-12, 0"/>
